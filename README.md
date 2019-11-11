@@ -27,11 +27,11 @@ What are the coordinates of point 'BC'? At a cursory glance, one could tell it's
 
 This code is separated into three functions of increasing generality.
 
-##WHY DID I DO THIS? 
+## WHY DID I DO THIS? 
 Used this nifty little algorithm to map the location of a point on a hilbert curve onto an update matrix as part of the 2019 McGill Physics hackathon, and I wanted to keep playing around / generalize it
 https://devpost.com/software/bounded-chaos
 
-##hilbert_index(seq)
+## hilbert_index(seq)
 input: sequence ex. DCAB
 
 output: [x,y] coordinate value of the point
@@ -99,7 +99,7 @@ coordinate value for DD = [3,3]
 
 ```
 
-##curve_index(dimRow, colRow, seq)
+## curve_index(dimRow, colRow, seq)
 
 Generalized the function to output [x,y] coordinates for a space filling curve on an m * n grid, instead of 2x2. Unfortunately I haven't standardized the labelling to accept any arbitrary number of labels, as I'm constrained to the alphabet (upper + lower case). At most, my n * m curve as it is in this iteration can accept 54 initial states/orthants (27 upper case + 27 lower case letters). I'm not super worried about this because usually the initial stage is pretty simple, not an arbitrarily large grid. I mean, it could be. But it isn't. 
 
@@ -125,7 +125,7 @@ The rows and columns grow at different rates because of the different dimensions
 A point that is in quadrant A will never be in a row larger than 1/2 of the current row dimension, and will never be in a column larger than 1/3 of the current column dimension. So for a 2x3 grid of order 1, any point starting with the letter A will have to be in either row 0 or 1, and in column 0, 1, or 2. Using this method, I can start narrowing down the range where the point can actually reside.
 
 
-##curve_index2(seq, dims)
+## curve_index2(seq, dims)
 Further generalized to allow for an arbitrary number of dimensions, not just 2 (x,y)
 
 The argument dims accepts a list of values 
@@ -134,7 +134,7 @@ ex. dims = [2,2,2] represents a curve that initializes in a 2x2x2 cube
 I also further generalized and condensed the code so I'm not repeating the same thing for each coordinate as in the previous function.
 Finally, I further condensed the algorithm used to narrow the range of values in which I search 
 
-##TODO
+## TODO
 - Clean up documentation. I realize this probably wasn't the clearest explanation I could have given. I'm not a mathematician, so it's all very clear in my pencil and paper notebook, but the written notation eludes me somewhat. Maybe the best format for me would be a youtube video
 - come up with better numbering system for labels
 - error checks: ensure input dims are integers, seq is string of valid characters
