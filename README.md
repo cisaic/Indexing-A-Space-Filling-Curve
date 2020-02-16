@@ -1,12 +1,18 @@
 # curve-index
 
-The purpose of this function is to get coordinate positions of a point on a space filling curve, given the orthant sequence. Translating from alpha space to numeric space
+The purpose of this function is to get coordinate positions of a point on a (pseudo) space filling curve, given the orthant sequence (translating from alpha space to numeric space)
 
+I've provided three solutions to this problem: 
+- The hilbert_index function is one way of doing it
+- curve_index and curve_index2 offer a more general solution, and also apply a different logic 
+- In the end of this README I propose a final way of approaching the problem, but it's not implemented in the code. It's similar to the first solution, but top down instead of bottom up.
+
+These would best be illustrated by an animation (#TODO)
 
 The orthants are labelled a, b, c, etc... from left -> right, top -> bottom to standardize the convention. 
 
 Example:
-A Hilbert curve at order 0 starts on a 2x2 grid
+A [Hilbert curve](https://www.youtube.com/watch?v=3s7h2MHQtxc) at order 0 starts on a 2x2 grid
 
 The quadrants would be labelled:
 ```
@@ -28,8 +34,7 @@ What are the coordinates of point 'BC'? At a cursory glance, one could tell it's
 This code is separated into three functions of increasing generality.
 
 ## WHY DID I DO THIS? 
-Used this nifty little algorithm to map the location of a point on a hilbert curve onto an update matrix as part of the 2019 McGill Physics hackathon, and I wanted to keep playing around / generalize it
-https://devpost.com/software/bounded-chaos
+Used this nifty little algorithm to map the location of a point on a hilbert curve onto an update matrix as part of the 2019 McGill Physics hackathon, and I wanted to keep playing around / generalize it. [Hackathon submission](https://devpost.com/software/bounded-chaos)
 
 ## hilbert_index(seq)
 input: sequence ex. DCAB
