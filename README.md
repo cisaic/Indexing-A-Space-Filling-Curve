@@ -101,7 +101,7 @@ coordinate value for DD = [3,3]
 
 ## curve_index(dimRow, colRow, seq)
 
-Generalized the function to output [x,y] coordinates for a space filling curve on an m * n grid, instead of 2x2. Unfortunately I haven't standardized the labelling to accept any arbitrary number of labels, as I'm constrained to the alphabet (upper + lower case). At most, my n * m curve as it is in this iteration can accept 54 initial states/orthants (27 upper case + 27 lower case letters). I'm not super worried about this because usually the initial stage is pretty simple, not an arbitrarily large grid. I mean, it could be. But it isn't. 
+Generalized the function to output [x,y] coordinates for a space filling curve on an m * n grid, instead of 2x2. Unfortunately I haven't standardized the labelling to accept any arbitrary number of labels, as I'm constrained to the alphabet (upper + lower case). At most, my n * m curve as it is in this iteration can accept 52 initial states/orthants (27 upper case + 27 lower case letters). I'm not super worried about this because usually the initial stage is pretty simple, not an arbitrarily large grid. I mean, it could be. But it isn't. 
 
 Anyway, in order to calculate the index, I have to narrow the range that the point could be in as I iterate through the input sequence. For example, a 2x3 grid would look like this at order 0:
 
