@@ -1,3 +1,7 @@
+View live demo of the functions in action [at this link here](www.cisaic.pythonanywhere.com) (PythonAnywhere). [Built using Flask](https://github.com/cisaic/Flask-IndexingACurve).
+
+#Description of the functions found in this project
+
 # curve-index
 
 The purpose of this function is to get coordinate positions of a point on a (pseudo) space filling curve, given the orthant sequence (translating from alpha space to numeric space)
@@ -146,7 +150,7 @@ A more thorough explanation of how the code actually works:
 
 curve_index2 takes two agruments: a sequence (ex. DCAB) that indicates a point on a space filling curve, and the dimensions of the curve at order 0. So far, this function will only work up to the dimensions of 4x4x3 because I haven't figured out a labelling system larger than the lower case + upper case alphabets. It wasn't a priority to focus on this because the initial curve is often very simple anyway (take the hilbert curve, for example. It starts on with 2x2 dimensions)
 
-The number of possible states are given by the dimensions provided. Let's use the Hilbert curve as an example again. I have 2*2 = 4 initial possible states 
+The number of possible states are given by the dimensions provided. Let's use the Hilbert curve as an example again. I have 2x2 = 4 initial possible states 
 
 The transformation matrix basically indexes the coordinates in the initial grid 
 
